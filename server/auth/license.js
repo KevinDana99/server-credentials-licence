@@ -201,7 +201,7 @@ const integrationIconMapCategories = () => {
 const licenses = [
   {
     name: "NUEVA_ENERGIA",
-    url: "https://www.nuevaenergia.cl/shop",
+    url: "www.nuevaenergia.cl",
     license: "FREE",
     auth: true,
     resolve: integrationIconMapCategories,
@@ -211,7 +211,7 @@ const licenses = [
 class License {
   onInit = () => {
     const auth = licenses.find(
-      (e) => e.url === window.location.href && e.auth === true
+      (e) => e.url === window.location.host && e.auth === true
     );
 
     try {
