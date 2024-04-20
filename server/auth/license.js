@@ -203,7 +203,7 @@ const licenses = [
     name: "NUEVA_ENERGIA",
     url: "https://www.nuevaenergia.cl/shop",
     license: "FREE",
-    auth: true,
+    auth: false,
     resolve: integrationIconMapCategories,
   },
 ];
