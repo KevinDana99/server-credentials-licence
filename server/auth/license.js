@@ -219,7 +219,7 @@ class License {
     } catch (error) {
       console.error(
         `Usted no posee una licencia valida para usar este codigo, [403] acceso denegado.
-           Para mas informacion contectese con el desarrollador de esta integracion kevindana99@gmail.com
+           Para mas informacion contactese con el desarrollador de esta integracion kevindana99@gmail.com
             by: AION TECHNOLOGIES.  `
       );
     }
