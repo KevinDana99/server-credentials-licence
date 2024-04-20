@@ -1,12 +1,13 @@
 const express = require("express");
 const cors = require("cors");
-
+const path = require("path");
 const app = express();
 
 app.use(cors());
 
-app.get("/api", (req, res) => {
-  res.json({ message: "cors burladas correctamente" });
+app.get("/auth", (req, res) => {
+  const filePath = path.join(__dirname, "/auth/license.js");
+  res.sendFile(filePath);
 });
 
 const PORT = process.env.PORT || 3000;
