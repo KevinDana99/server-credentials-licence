@@ -1,8 +1,14 @@
 const integrationIconMapCategories = () => {
   const menu = document.querySelectorAll(".o_shop_collapse_category")[0]
     .children[0];
+  const menuMobile = document.querySelectorAll(".o_shop_collapse_category")[1]
+  .children[0];
   const mapMenu = menu.children;
+const mapMenuMobile = menuMobile.children;
+
   const iconSize = 20;
+  const mapMenus = [mapMenu,mapMenuMobile];
+
   const icons = [
     `
   <svg width="${
@@ -146,7 +152,8 @@ const integrationIconMapCategories = () => {
     <path class="cls-1" d="M182.48,51.26c-2.21,0-4,1.79-4,4v29.62c0,3.42-2.87,6.21-6.4,6.21s-6.4-2.78-6.4-6.21c0-2.21-1.79-4-4-4s-4,1.79-4,4c0,3.42-2.87,6.21-6.4,6.21-3.02,0-5.55-2.03-6.22-4.76.05-.48.07-.96.07-1.45,0-2.21-1.79-4-4-4-.04,0-.08.01-.13.01-.04,0-.08-.01-.13-.01-2.21,0-4,1.79-4,4,0,.49.03.97.07,1.45-.67,2.73-3.2,4.76-6.22,4.76-3.53,0-6.4-2.78-6.4-6.21,0-2.21-1.79-4-4-4s-4,1.79-4,4c0,3.42-2.87,6.21-6.4,6.21s-6.4-2.78-6.4-6.21c0-2.21-1.79-4-4-4s-4,1.79-4,4c0,3.42-2.87,6.21-6.4,6.21-2.94,0-5.41-1.93-6.17-4.55V29.88c0-2.21-1.79-4-4-4s-4,1.79-4,4v13.12c-.14.41-.24.85-.24,1.31,0,2.86-2.41,5.19-5.37,5.19-2.52,0-4.62-1.69-5.2-3.96.04-.4.06-.81.06-1.23,0-2.21-1.79-4-4-4-.04,0-.08.01-.12.01-.04,0-.08-.01-.12-.01-2.21,0-4,1.79-4,4,0,.41.02.82.06,1.23-.57,2.27-2.68,3.96-5.2,3.96-2.96,0-5.37-2.33-5.37-5.19,0-2.21-1.79-4-4-4s-4,1.79-4,4c0,2.86-2.41,5.19-5.37,5.19s-5.37-2.33-5.37-5.19c0-2.21-1.79-4-4-4s-4,1.79-4,4c0,2.86-2.41,5.19-5.37,5.19s-5.37-2.33-5.37-5.19V4C8,1.79,6.21,0,4,0S0,1.79,0,4v70.6c0,2.21,1.79,4,4,4h70.93v4.96c-.14.41-.24.85-.24,1.31,0,.86.09,1.7.24,2.51v43.07c0,2.21,1.79,4,4,4h103.55c2.21,0,4-1.79,4-4V55.26c0-2.21-1.79-4-4-4ZM8,70.6v-14.22c1.64.71,3.46,1.12,5.37,1.12,3.65,0,6.95-1.45,9.37-3.79,2.41,2.34,5.72,3.79,9.37,3.79s6.95-1.45,9.37-3.79c2.41,2.34,5.72,3.79,9.37,3.79s6.85-1.41,9.25-3.69c2.4,2.28,5.66,3.69,9.25,3.69,2,0,3.9-.45,5.6-1.23v14.33H8ZM82.93,126.46v-28.76c1.87.88,3.96,1.39,6.17,1.39,4.09,0,7.78-1.7,10.4-4.41,2.62,2.71,6.31,4.41,10.4,4.41s7.78-1.7,10.4-4.41c2.62,2.71,6.31,4.41,10.4,4.41s7.66-1.64,10.28-4.27c2.62,2.63,6.25,4.27,10.28,4.27s7.78-1.7,10.4-4.41c2.62,2.71,6.31,4.41,10.4,4.41,2.3,0,4.47-.55,6.4-1.5v28.88h-95.55Z"/>
   </svg>`,
   ];
-  Array.from(mapMenu).forEach((e, index) => {
+mapMenus.forEach((menuParam) => {
+  Array.from(menuParam).forEach((e, index) => {
     if (index < 1) {
       null;
     } else {
@@ -174,33 +181,8 @@ const integrationIconMapCategories = () => {
     
     }
   });
-  const menuMobile = document.querySelectorAll(".o_shop_collapse_category")[1]
-    .children[0];
-  const mapMenuMobile = menuMobile.children;
+})
 
-  Array.from(mapMenuMobile).forEach((e, index) => {
-    if (index < 1 || index > icons.length) {
-      null;
-    } else {
-      const temp = document.createElement("div");
-      temp.innerHTML = icons[index - 1];
-      const firstElement = e.children[0].firstChild;
-      if (!e.children[0].classList.contains("accordion-header")) {
-        e.children[0].style.setProperty(
-          "justify-content",
-          "flex-start",
-          "important"
-        );
-        e.children[0].style.setProperty("flex-wrap", "nowrap", "important");
-        e.children[0].style.setProperty(
-          "align-items",
-          "flex-start",
-          "important"
-        );
-      }
-      e.children[0].insertBefore(temp, firstElement);
-    }
-  });
 };
 
 const licenses = [
