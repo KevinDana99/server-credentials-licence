@@ -7,7 +7,7 @@ const integrationIconMapCategories = () => {
   const mapMenu = menu.children;
 const mapMenuMobile = menuMobile.children;
 
-  const iconSize = 20;
+  const iconSize = 30;
   const mapMenus = [mapMenu,mapMenuMobile];
 
   const icons = [
