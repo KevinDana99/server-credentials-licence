@@ -1,4 +1,4 @@
-import {icons} from './components/icons';
+const icons  = require('./components/icons/index.js');
 
 const addedIconsToMenu = () => {
   const categories = document.querySelectorAll(".o_shop_collapse_category");
@@ -43,7 +43,4 @@ e.style.display = "block"
   });
 })
   };
-
- export default {
-addedIconsToMenu
-  }
+module.exports = addedIconsToMenu;

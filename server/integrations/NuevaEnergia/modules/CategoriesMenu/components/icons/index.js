@@ -143,4 +143,4 @@ const icons = [
   </svg>`,
   ];
 
-  export default icons;
+module.exports = icons;

@@ -1,4 +1,4 @@
-import {addedIconsToMenu} from './../integrations/NuevaEnergia/modules/CategoriesMenu/';
+const addedIconsToMenu = require('./../integrations/NuevaEnergia/modules/CategoriesMenu/index.js');
 
 const licenses = [
   {
