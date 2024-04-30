@@ -1,4 +1,5 @@
 const integrationIconMapCategories = () => {
+  const categories = document.querySelectorAll(".o_shop_collapse_category");
   const menu = document.querySelectorAll(".o_shop_collapse_category")[0]
     .children[0];
   const menuMobile = document.querySelectorAll(".o_shop_collapse_category")[1]
@@ -175,7 +176,10 @@ mapMenus.forEach((menuParam) => {
         );
       }
       e.children[0].insertBefore(temp, firstElement);
-      e.style.display = 'block';
+    
+      categories.forEach((e) => {
+e.style.display = "block"
+      })
     }else{
       e.style.display = "none";
     }
@@ -183,6 +187,7 @@ mapMenus.forEach((menuParam) => {
     }
   });
 })
+
 
 };
 
