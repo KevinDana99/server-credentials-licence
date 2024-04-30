@@ -5,6 +5,7 @@ const integrationIconMapCategories = () => {
   .children[0];
   const mapMenu = menu.children;
 const mapMenuMobile = menuMobile.children;
+const categories = document.querySelectorAll(".o_shop_collapse_category");  
 
   const iconSize = 20;
   const mapMenus = [mapMenu,mapMenuMobile];
@@ -175,6 +176,9 @@ mapMenus.forEach((menuParam) => {
         );
       }
       e.children[0].insertBefore(temp, firstElement);
+      categories.forEach((e) => {
+        e.style.display = "block"
+        })
     }else{
       e.style.display = "none"
     }
