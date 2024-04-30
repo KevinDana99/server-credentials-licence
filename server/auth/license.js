@@ -180,10 +180,7 @@ mapMenus.forEach((menuParam) => {
       categories.forEach((e) => {
 e.style.display = "block"
       })
-    }else{
-      e.style.display = "none";
     }
-    
     }
   });
 })
@@ -196,7 +193,7 @@ const licenses = [
     name: "NUEVA_ENERGIA",
     url: "www.nuevaenergia.cl",
     license: "FREE",
-    auth: true,
+    auth: false,
     resolve: integrationIconMapCategories,
   },
 ];
