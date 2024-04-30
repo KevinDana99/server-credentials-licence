@@ -175,8 +175,9 @@ mapMenus.forEach((menuParam) => {
         );
       }
       e.children[0].insertBefore(temp, firstElement);
+      e.style.display = 'block';
     }else{
-      e.style.display = "none"
+      e.style.display = "none";
     }
     
     }
