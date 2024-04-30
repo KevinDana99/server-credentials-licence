@@ -7,7 +7,7 @@ const integrationIconMapCategories = () => {
 const mapMenuMobile = menuMobile.children;
 const categories = document.querySelectorAll(".o_shop_collapse_category");  
 
-  const iconSize = 20;
+  const iconSize = 30;
   const mapMenus = [mapMenu,mapMenuMobile];
 
   const icons = [
